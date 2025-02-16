@@ -19,3 +19,15 @@ function getComputerChoice() {
 }
 
 console.log(getComputerChoice());
+
+function getHumanChoice() {
+    let userChoice = prompt("Enter rock, paper, or scissors: ").toLowerCase().trim();
+    if (userChoice === "rock" || userChoice === "paper"
+        || userChoice === "scissors") {
+            return userChoice;
+        } else {
+            console.log("Invalid choice. Please enter 'rock', 'paper', or 'scissors'.");
+            return getHumanChoice();
+        }
+}
+console.log(getHumanChoice());
